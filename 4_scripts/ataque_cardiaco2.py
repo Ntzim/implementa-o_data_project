@@ -5,7 +5,7 @@ from sklearn.metrics import accuracy_score
 from sklearn.model_selection import train_test_split
 
 # carregando dados
-df = pd.read_csv('../heart.csv')
+df = pd.read_csv('heart.csv')
 df['Sex'] = df['Sex'].replace({'F': 0, 'M': 1})
 
 #Titulo do Site

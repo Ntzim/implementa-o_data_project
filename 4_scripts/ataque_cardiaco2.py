@@ -1,6 +1,3 @@
-!pip install scikit-learn
-!pip install pandas
-
 import pandas as pd
 import streamlit as st
 from sklearn.tree import DecisionTreeClassifier

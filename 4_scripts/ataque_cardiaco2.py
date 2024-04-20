@@ -8,6 +8,8 @@ import joblib
 from sklearn.ensemble import GradientBoostingClassifier as GBC
 from sklearn.ensemble import RandomForestClassifier as RFC
 from sklearn.neighbors import KNeighborsClassifier as KNC
+from sklearn import ensemble
+import sklearn
 
 # Validação cruzada
 from sklearn.model_selection import train_test_split, KFold, cross_val_score

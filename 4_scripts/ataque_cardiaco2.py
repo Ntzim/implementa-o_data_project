@@ -13,9 +13,6 @@ from sklearn.neighbors import KNeighborsClassifier as KNC
 from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn.metrics import classification_report
 
-# carregando dados
-df = pd.read_csv('../heart.csv')
-df['Sex'] = df['Sex'].replace({'F': 0, 'M': 1})
 
 #Titulo do Site
 st.title("Previsão de Ataque Cárdiaco")

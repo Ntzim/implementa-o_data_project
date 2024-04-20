@@ -158,11 +158,20 @@ df['PRE_STSLOPE_UP'] =   [1 if x=='Up'   else 0 for x in df['ST_Slope']]
 df['PRE_STSLOPE_DOWN'] =   [1 if x=='Down'   else 0 for x in df['ST_Slope']]
 
 
+#SELECIONANDO VARIAVEIS
+variaveis_selecionadas = ['PRE_AGE','PRE_SEX_F','PRE_SEX_M','PRE_CPT_ASY','PRE_CPT_ATA','PRE_CPT_NAP',
+                     'PRE_CPT_TA','PRE_RESTINGBP','PRE_CHOLESTEROL','PRE_FBS_0','PRE_FBS_1','PRE_RESTECG_LVH',
+                     'PRE_RESTECG_NORMAL','PRE_RESTECG_ST','PRE_MAXHR','PRE_ANGINA_N','PRE_ANGINA_Y','PRE_OLDPEAK_ECG',
+                     'PRE_STSLOPE_FLAT','PRE_STSLOPE_UP','PRE_STSLOPE_DOWN']
+
 
 # CARREGANDO MODELO
 modelo = joblib.load('../4_scripts/modelo_treinado_gradientboosting.pk')
 
+#PREVISÂO
+previsão = modelo.predict(variaveis_selecionadas)
 
 
 # Plotando grafico
+st.write(previsão)
 chart = st.bar_chart(df)

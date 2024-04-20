@@ -169,7 +169,7 @@ variaveis_selecionadas = ['PRE_AGE','PRE_SEX_F','PRE_SEX_M','PRE_CPT_ASY','PRE_C
 modelo = joblib.load('../4_scripts/modelo_treinado_gradientboosting.pk')
 
 #PREVISÂO
-previsão = modelo.predict(variaveis_selecionadas)
+previsão = modelo.predict(df[variaveis_selecionadas])
 
 
 # Plotando grafico

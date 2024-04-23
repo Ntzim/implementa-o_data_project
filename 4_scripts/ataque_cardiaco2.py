@@ -164,12 +164,17 @@ variaveis_selecionadas = ['PRE_AGE','PRE_SEX_F','PRE_SEX_M','PRE_CPT_ASY','PRE_C
                      'PRE_STSLOPE_FLAT','PRE_STSLOPE_UP','PRE_STSLOPE_DOWN']
 
 
-# CARREGANDO MODELO
-modelo = joblib.load('4_scripts/modelo_treinado_gradientboosting.pk')
+#IMPORTANDO MODELO
+modelo = joblib.load('../4_scripts/modelo_treinado_knn.pk')
 
-#PREVISÂO
+
+# PREVISÃO
 previsão = modelo.predict(df[variaveis_selecionadas])
 
+st.write(previsão)
+
+# Plotando grafico
+chart = st.bar_chart(df)
 
 # Plotando grafico
 st.write(previsão)

@@ -165,17 +165,16 @@ variaveis_selecionadas = ['PRE_AGE','PRE_SEX_F','PRE_SEX_M','PRE_CPT_ASY','PRE_C
 
 
 #IMPORTANDO MODELO
-modelo = joblib.load('../4_scripts/modelo_treinado_knn.pk')
+modelo = joblib.load('4_scripts/modelo_treinado_knn.pk')
 
 
 # PREVISÃO
 previsão = modelo.predict(df[variaveis_selecionadas])
-
+#PLOTANDO PREVISÂO
 st.write(previsão)
 
 # Plotando grafico
 chart = st.bar_chart(df)
 
-# Plotando grafico
-st.write(previsão)
-chart = st.bar_chart(df)
+
+

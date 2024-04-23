@@ -173,8 +173,7 @@ previsão = modelo.predict(df[variaveis_selecionadas])
 #PLOTANDO PREVISÂO
 st.write(previsão)
 
-# Plotando grafico
-chart = st.bar_chart(df)
+
 
 
 

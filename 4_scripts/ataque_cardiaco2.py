@@ -133,7 +133,7 @@ def get_user_data():
 
 #IMPORTANDO MODELO
 
-modelo = joblib.load('../4_scripts/modelo_treinado_knn.pk')
+modelo = joblib.load('../modelo_treinado_knn.pk')
 
 
 
